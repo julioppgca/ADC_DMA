@@ -14,22 +14,7 @@ static uint16_t g_uint16_adc0_pong[DMA_BUFFER_SIZE];
 
 // analog channel matrix
 // ADC channels stored values
-#ifdef USE_FLOAT
 float32_t ADCchannel[CHANNELS_COUNTER][SAMPLE_FRAME];
-#else
-uint16_t ADCchannel[CHANNELS_COUNTER][SAMPLE_FRAME];
-#endif
-
-float ain1[256];
-
-void copyAin1(uint16_t *pSrc, float *pDst, uint16_t size )
-{
-    uint16_t i;
-
-    for(i=0;i<size;i++)
-        *pDst++ = (float)*pSrc++;
-
-}
 
 
 /**
@@ -342,14 +327,14 @@ void adc0Ping_Swi(void)
     // process first part of AIN0...AIN7
     for (i = 0, j = 0; i < SAMPLE_FRAME / 2; i++)
     {
-        ADCchannel[CH0][i] = g_uint16_adc0_ping[j + AIN0];
-        ADCchannel[CH1][i] = g_uint16_adc0_ping[j + AIN1];
-        ADCchannel[CH2][i] = g_uint16_adc0_ping[j + AIN2];
-        ADCchannel[CH3][i] = g_uint16_adc0_ping[j + AIN3];
-        ADCchannel[CH4][i] = g_uint16_adc0_ping[j + AIN4];
-        ADCchannel[CH5][i] = g_uint16_adc0_ping[j + AIN5];
-        ADCchannel[CH6][i] = g_uint16_adc0_ping[j + AIN6];
-        ADCchannel[CH7][i] = g_uint16_adc0_ping[j + AIN7];
+        ADCchannel[CH0][i] = (float32_t)g_uint16_adc0_ping[j + AIN0];
+        ADCchannel[CH1][i] = (float32_t)g_uint16_adc0_ping[j + AIN1];
+        ADCchannel[CH2][i] = (float32_t)g_uint16_adc0_ping[j + AIN2];
+        ADCchannel[CH3][i] = (float32_t)g_uint16_adc0_ping[j + AIN3];
+        ADCchannel[CH4][i] = (float32_t)g_uint16_adc0_ping[j + AIN4];
+        ADCchannel[CH5][i] = (float32_t)g_uint16_adc0_ping[j + AIN5];
+        ADCchannel[CH6][i] = (float32_t)g_uint16_adc0_ping[j + AIN6];
+        ADCchannel[CH7][i] = (float32_t)g_uint16_adc0_ping[j + AIN7];
         j += AIN_OFFSET;
     }
 }
@@ -360,19 +345,16 @@ void adc0Pong_Swi(void)
     // process last part of AIN0...AIN7
     for (i = SAMPLE_FRAME / 2, j = 0; i < SAMPLE_FRAME; i++)
     {
-        ADCchannel[CH0][i] =  g_uint16_adc0_pong[j + AIN0];
-        ADCchannel[CH1][i] =  g_uint16_adc0_pong[j + AIN1];
-        ADCchannel[CH2][i] =  g_uint16_adc0_pong[j + AIN2];
-        ADCchannel[CH3][i] =  g_uint16_adc0_pong[j + AIN3];
-        ADCchannel[CH4][i] =  g_uint16_adc0_pong[j + AIN4];
-        ADCchannel[CH5][i] =  g_uint16_adc0_pong[j + AIN5];
-        ADCchannel[CH6][i] =  g_uint16_adc0_pong[j + AIN6];
-        ADCchannel[CH7][i] =  g_uint16_adc0_pong[j + AIN7];
+        ADCchannel[CH0][i] =  (float32_t)g_uint16_adc0_pong[j + AIN0];
+        ADCchannel[CH1][i] =  (float32_t)g_uint16_adc0_pong[j + AIN1];
+        ADCchannel[CH2][i] =  (float32_t)g_uint16_adc0_pong[j + AIN2];
+        ADCchannel[CH3][i] =  (float32_t)g_uint16_adc0_pong[j + AIN3];
+        ADCchannel[CH4][i] =  (float32_t)g_uint16_adc0_pong[j + AIN4];
+        ADCchannel[CH5][i] =  (float32_t)g_uint16_adc0_pong[j + AIN5];
+        ADCchannel[CH6][i] =  (float32_t)g_uint16_adc0_pong[j + AIN6];
+        ADCchannel[CH7][i] =  (float32_t)g_uint16_adc0_pong[j + AIN7];
         j += AIN_OFFSET;
     }
-
-    // debug only, use CCS Graph tool
-    copyAin1(ADCchannel[CH1],ain1,256);
 
     // post event ADC0 data ready
     Event_post(e_adcData_Ready, Event_Id_00);

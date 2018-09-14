@@ -85,7 +85,7 @@ main_cmsis_dsp.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packa
 main_cmsis_dsp.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_SupportProxy.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_Module_GateProxy.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h
-main_cmsis_dsp.obj: /Users/Julio/ECP108/ARM_CMSIS_DSP/Debug/configPkg/package/cfg/rtos_config_pem4f.h
+main_cmsis_dsp.obj: /Users/Julio/ECP108/EX2_ARM_CMSIS_DSP/Debug/configPkg/package/cfg/rtos_config_pem4f.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
@@ -192,6 +192,7 @@ main_cmsis_dsp.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packa
 main_cmsis_dsp.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Event__epilogue.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Swi.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Swi.h
+main_cmsis_dsp.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/BIOS_RtsGateProxy.h
 main_cmsis_dsp.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
@@ -326,7 +327,7 @@ main_cmsis_dsp.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_SupportProxy.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_Module_GateProxy.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h: 
-/Users/Julio/ECP108/ARM_CMSIS_DSP/Debug/configPkg/package/cfg/rtos_config_pem4f.h: 
+/Users/Julio/ECP108/EX2_ARM_CMSIS_DSP/Debug/configPkg/package/cfg/rtos_config_pem4f.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 
@@ -433,6 +434,7 @@ main_cmsis_dsp.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Event__epilogue.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Swi.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Swi.h: 
+/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/package/BIOS_RtsGateProxy.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 

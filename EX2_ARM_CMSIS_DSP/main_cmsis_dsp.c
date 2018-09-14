@@ -36,6 +36,41 @@ void heartBeat_TASK(void)
     }
 }
 
+
+/* ----- RMS Calc ----- */
+void rmsCalc_TASK(void)
+{
+    static float32_t rmsValue;
+    static float32_t meanValue;
+    static float32_t ain0[SAMPLE_FRAME];
+
+    while(1)
+    {
+        // reset rms value
+        rmsValue = 0 ;
+
+        // wait dma process
+        Event_pend(e_adcData_Ready, Event_Id_00, Event_Id_NONE,
+                BIOS_WAIT_FOREVER);
+
+        //copy to new vector
+        arm_copy_f32(ADCchannel[0], ain0, SAMPLE_FRAME);
+
+        // get mean value
+        arm_mean_f32(ain0, SAMPLE_FRAME, &meanValue);
+
+        // apply offset
+        arm_offset_f32( ain0, -meanValue, ain0, SAMPLE_FRAME);
+
+        // get rms value from sample
+        arm_rms_f32(ain0, SAMPLE_FRAME, &rmsValue);
+
+        // lets take a rest
+        Task_sleep(300);
+
+    }
+}
+
 /*
  *  ======== main ========
  */

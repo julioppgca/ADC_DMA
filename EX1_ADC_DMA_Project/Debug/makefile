@@ -125,34 +125,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-ADC_DMA_Project.out \
+EX1_ADC_DMA_Project.out \
 
 EXE_OUTPUTS__QUOTED += \
-"ADC_DMA_Project.out" \
+"EX1_ADC_DMA_Project.out" \
 
 BIN_OUTPUTS += \
-ADC_DMA_Project.hex \
+EX1_ADC_DMA_Project.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"ADC_DMA_Project.hex" \
+"EX1_ADC_DMA_Project.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "ADC_DMA_Project.out"
+	@$(MAKE) --no-print-directory -Onone "EX1_ADC_DMA_Project.out"
 
 # Tool invocations
-ADC_DMA_Project.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+EX1_ADC_DMA_Project.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"ADC_DMA_Project.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ADC_DMA_Project_linkInfo.xml" --rom_model -o "ADC_DMA_Project.out" $(ORDERED_OBJS)
+	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"EX1_ADC_DMA_Project.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="EX1_ADC_DMA_Project_linkInfo.xml" --rom_model -o "EX1_ADC_DMA_Project.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-ADC_DMA_Project.hex: $(EXE_OUTPUTS)
+EX1_ADC_DMA_Project.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex"  -o "ADC_DMA_Project.hex" $(EXE_OUTPUTS__QUOTED)
+	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex"  -o "EX1_ADC_DMA_Project.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

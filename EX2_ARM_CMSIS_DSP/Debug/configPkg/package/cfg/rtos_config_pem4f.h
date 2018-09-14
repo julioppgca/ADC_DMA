@@ -22,6 +22,9 @@ extern const ti_sysbios_knl_Swi_Handle adc0Ping_Swi_Handle;
 #include <ti/sysbios/knl/Swi.h>
 extern const ti_sysbios_knl_Swi_Handle adc0Pong_Swi_Handle;
 
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle rmsCalc_TASK_Handle;
+
 extern int xdc_runtime_Startup__EXECFXN__C;
 
 extern int xdc_runtime_Startup__RESETFXN__C;

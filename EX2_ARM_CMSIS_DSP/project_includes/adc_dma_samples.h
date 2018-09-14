@@ -111,7 +111,7 @@ How to use:
 #include "project_includes/Board.h"
 
 /* ARM Math CMSIS DSP */
-//#include <arm_math.h>
+#include <arm_math.h>
 
 /**
  *
@@ -185,6 +185,6 @@ void startSampling(void);
  *      ADCchannel result matrix
  *
  */
-extern uint16_t ADCchannel[CHANNELS_COUNTER][SAMPLE_FRAME];
+extern float32_t ADCchannel[CHANNELS_COUNTER][SAMPLE_FRAME];
 
 #endif // __SAMPLES_CONFIG_H__

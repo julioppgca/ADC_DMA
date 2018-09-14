@@ -1,7 +1,7 @@
 # FIXED
 
 project_includes/adc_dma_samples.obj: ../project_includes/adc_dma_samples.c
-project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/ADC_DMA_Project/project_includes/adc_dma_samples.h
+project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/EX1_ADC_DMA_Project/project_includes/adc_dma_samples.h
 project_includes/adc_dma_samples.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdint.h
 project_includes/adc_dma_samples.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/stdint.h
 project_includes/adc_dma_samples.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/cdefs.h
@@ -11,7 +11,7 @@ project_includes/adc_dma_samples.obj: /Applications/ti/ccsv8/tools/compiler/ti-c
 project_includes/adc_dma_samples.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_stdint.h
 project_includes/adc_dma_samples.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdbool.h
 project_includes/adc_dma_samples.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h
-project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/ADC_DMA_Project/Debug/configPkg/package/cfg/rtos_config_pem4f.h
+project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/EX1_ADC_DMA_Project/Debug/configPkg/package/cfg/rtos_config_pem4f.h
 project_includes/adc_dma_samples.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/std.h
 project_includes/adc_dma_samples.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdarg.h
 project_includes/adc_dma_samples.obj: /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stddef.h
@@ -207,11 +207,11 @@ project_includes/adc_dma_samples.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/pr
 project_includes/adc_dma_samples.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/rom_map.h
 project_includes/adc_dma_samples.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/sysctl.h
 project_includes/adc_dma_samples.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages/ti/drivers/GPIO.h
-project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/ADC_DMA_Project/project_includes/Board.h
-project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/ADC_DMA_Project/project_includes/EK_TM4C123GXL.h
+project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/EX1_ADC_DMA_Project/project_includes/Board.h
+project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/EX1_ADC_DMA_Project/project_includes/EK_TM4C123GXL.h
 
 ../project_includes/adc_dma_samples.c: 
-/Users/Julio/ECP108/ADC_DMA_Project/project_includes/adc_dma_samples.h: 
+/Users/Julio/ECP108/EX1_ADC_DMA_Project/project_includes/adc_dma_samples.h: 
 /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdint.h: 
 /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/stdint.h: 
 /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/cdefs.h: 
@@ -221,7 +221,7 @@ project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/ADC_DMA_Project/projec
 /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/sys/_stdint.h: 
 /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdbool.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h: 
-/Users/Julio/ECP108/ADC_DMA_Project/Debug/configPkg/package/cfg/rtos_config_pem4f.h: 
+/Users/Julio/ECP108/EX1_ADC_DMA_Project/Debug/configPkg/package/cfg/rtos_config_pem4f.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/std.h: 
 /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stdarg.h: 
 /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include/stddef.h: 
@@ -417,5 +417,5 @@ project_includes/adc_dma_samples.obj: /Users/Julio/ECP108/ADC_DMA_Project/projec
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/rom_map.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/sysctl.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages/ti/drivers/GPIO.h: 
-/Users/Julio/ECP108/ADC_DMA_Project/project_includes/Board.h: 
-/Users/Julio/ECP108/ADC_DMA_Project/project_includes/EK_TM4C123GXL.h: 
+/Users/Julio/ECP108/EX1_ADC_DMA_Project/project_includes/Board.h: 
+/Users/Julio/ECP108/EX1_ADC_DMA_Project/project_includes/EK_TM4C123GXL.h: 

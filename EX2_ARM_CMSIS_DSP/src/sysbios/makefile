@@ -16,7 +16,7 @@ BIOS_INC  = -I"/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/
 
 TARGET_INC = -I"/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/"
 
-INCS = $(BIOS_INC) $(TARGET_INC)  --include_path="/Users/Julio/ECP108/ARM_CMSIS_DSP" --include_path="/Users/Julio/ECP108/ARM_CMSIS_DSP" --include_path="/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b" --include_path="/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/posix" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" 
+INCS = $(BIOS_INC) $(TARGET_INC)  --include_path="/Users/Julio/ti/CMSIS-SP-00300-r4p5-00rel0/CMSIS/Include" --include_path="/Users/Julio/ECP108/EX2_ARM_CMSIS_DSP" --include_path="/Users/Julio/ECP108/EX2_ARM_CMSIS_DSP" --include_path="/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b" --include_path="/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/posix" --include_path="/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" 
 
 CC = /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl -c $(CCOPTS) -I /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include
 ASM = /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl -c $(CCOPTS) -I /Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include

@@ -13,6 +13,7 @@ ORDERED_OBJS += \
 "./project_includes/adc_dma_samples.obj" \
 "../EK_TM4C123GXL.cmd" \
 $(GEN_CMDS__FLAG) \
+-l"/Users/Julio/ti/CMSIS-SP-00300-r4p5-00rel0/CMSIS/Lib/CCS/M4/dsplib-cm4f.lib" \
 -l"/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/grlib/ccs/Debug/grlib.lib" \
 -l"/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/usblib/ccs/Debug/usblib.lib" \
 -l"/Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/ccs/Debug/driverlib.lib" \
@@ -125,34 +126,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-ARM_CMSIS_DSP.out \
+EX2_ARM_CMSIS_DSP.out \
 
 EXE_OUTPUTS__QUOTED += \
-"ARM_CMSIS_DSP.out" \
+"EX2_ARM_CMSIS_DSP.out" \
 
 BIN_OUTPUTS += \
-ARM_CMSIS_DSP.hex \
+EX2_ARM_CMSIS_DSP.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"ARM_CMSIS_DSP.hex" \
+"EX2_ARM_CMSIS_DSP.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "ARM_CMSIS_DSP.out"
+	@$(MAKE) --no-print-directory -Onone "EX2_ARM_CMSIS_DSP.out"
 
 # Tool invocations
-ARM_CMSIS_DSP.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+EX2_ARM_CMSIS_DSP.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"ARM_CMSIS_DSP.map" --heap_size=0 --stack_size=512 -i"/Users/Julio/ti/CMSIS-SP-00300-r4p5-00rel0/CMSIS/Lib/CCS/M4" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ARM_CMSIS_DSP_linkInfo.xml" --rom_model -o "ARM_CMSIS_DSP.out" $(ORDERED_OBJS)
+	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --opt_for_speed=0 --define=ccs="ccs" --define=ARM_MATH_CM4 --define=__FPU_PRESENT=1 --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"EX2_ARM_CMSIS_DSP.map" --heap_size=0 --stack_size=512 -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/lib" -i"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="EX2_ARM_CMSIS_DSP_linkInfo.xml" --rom_model -o "EX2_ARM_CMSIS_DSP.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-ARM_CMSIS_DSP.hex: $(EXE_OUTPUTS)
+EX2_ARM_CMSIS_DSP.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex"  -o "ARM_CMSIS_DSP.hex" $(EXE_OUTPUTS__QUOTED)
+	"/Applications/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.3.LTS/bin/armhex"  -o "EX2_ARM_CMSIS_DSP.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

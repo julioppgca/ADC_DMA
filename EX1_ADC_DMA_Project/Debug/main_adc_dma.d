@@ -85,7 +85,7 @@ main_adc_dma.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/package
 main_adc_dma.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_SupportProxy.h
 main_adc_dma.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_Module_GateProxy.h
 main_adc_dma.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h
-main_adc_dma.obj: /Users/Julio/ECP108/ADC_DMA_Project/Debug/configPkg/package/cfg/rtos_config_pem4f.h
+main_adc_dma.obj: /Users/Julio/ECP108/EX1_ADC_DMA_Project/Debug/configPkg/package/cfg/rtos_config_pem4f.h
 main_adc_dma.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h
 main_adc_dma.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 main_adc_dma.obj: /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h
@@ -314,7 +314,7 @@ main_adc_dma.obj: /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Se
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_SupportProxy.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_Module_GateProxy.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h: 
-/Users/Julio/ECP108/ADC_DMA_Project/Debug/configPkg/package/cfg/rtos_config_pem4f.h: 
+/Users/Julio/ECP108/EX1_ADC_DMA_Project/Debug/configPkg/package/cfg/rtos_config_pem4f.h: 
 /Users/Julio/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/knl/Task.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 /Users/Julio/ti/tirex-content/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h: 

@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: '/Users/Julio/ECP108/ADC_DMA_Project/rtos_config.cfg',
+        cfgScript: '/Users/Julio/ECP108/EX1_ADC_DMA_Project/rtos_config.cfg',
         profile: 'release',
         cfgHome: 'configPkg',
 });
@@ -41,7 +41,7 @@ else {
 
 var thisObj = {
     cfg:        '../rtos_config.cfg',
-    outputPath: '/Users/Julio/ECP108/ADC_DMA_Project/Debug/configPkg',
+    outputPath: '/Users/Julio/ECP108/EX1_ADC_DMA_Project/Debug/configPkg',
     exeName:    'rtos_config' + suffix,
     exeIntName: 'rtos_config' + suffix.replace('.', '_'),
     targ:       targ,

@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker Unix v18.1.3                   
 ******************************************************************************
->> Linked Fri Sep 14 11:11:10 2018
+>> Linked Thu Sep 20 18:25:13 2018
 
 OUTPUT FILE NAME:   <EX1_ADC_DMA_Project.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 000042f9

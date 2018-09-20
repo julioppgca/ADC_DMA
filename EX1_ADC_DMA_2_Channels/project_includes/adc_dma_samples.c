@@ -17,9 +17,18 @@ static uint16_t g_uint16_adc1_pong[DMA_BUFFER_SIZE];
 
 // analog channel matrix
 // ADC channels stored values
-//float ADCchannel[2][DMA_BUFFER_SIZE];
+float ADCchannel[2][DMA_BUFFER_SIZE];
 
+/* ----- copy dma circular buffer to process variable ---- */
+static void copyDMAtoProcess(uint16_t *pIn, float *pOut, uint32_t length)
+{
+    uint32_t i;
 
+    for(i=0;i<length; i++)
+    {
+        *pOut++ = (float)*pIn++;
+    }
+}
 
 /**
  *                  Start Sampling proccess
@@ -289,13 +298,13 @@ static void dmaInit(void)
                           UDMA_SIZE_16 |
                           UDMA_SRC_INC_NONE |
                           UDMA_DST_INC_16 |
-                          UDMA_ARB_8);
+                          UDMA_ARB_1);
 
     uDMAChannelControlSet(UDMA_CHANNEL_ADC0 | UDMA_ALT_SELECT,
                           UDMA_SIZE_16 |
                           UDMA_SRC_INC_NONE |
                           UDMA_DST_INC_16 |
-                          UDMA_ARB_8);
+                          UDMA_ARB_1);
 
     // Channel A transfer set for ADC0
     uDMAChannelTransferSet(UDMA_CHANNEL_ADC0 | UDMA_PRI_SELECT,
@@ -315,13 +324,13 @@ static void dmaInit(void)
                           UDMA_SIZE_16 |
                           UDMA_SRC_INC_NONE |
                           UDMA_DST_INC_16 |
-                          UDMA_ARB_8);
+                          UDMA_ARB_1);
 
     uDMAChannelControlSet(UDMA_CH24_ADC1_0 | UDMA_ALT_SELECT,
                           UDMA_SIZE_16 |
                           UDMA_SRC_INC_NONE |
                           UDMA_DST_INC_16 |
-                          UDMA_ARB_8);
+                          UDMA_ARB_1);
 
    // Channel A transfer set for ADC1
    uDMAChannelTransferSet(UDMA_CH24_ADC1_0 | UDMA_PRI_SELECT,
@@ -354,7 +363,7 @@ static void dmaInit(void)
  */
 void adcSeq0_Hwi(void)
 {
-    //GPIO_write(Board_LED0, 1);
+    GPIO_write(Board_LED0, 1);
     static uint8_t FisrtTrasnfer = 2*INITIAL_TRANSFER_SKIP_NUMBER;
     uint32_t modePrimary;
     uint32_t modeAlternate;
@@ -379,7 +388,10 @@ void adcSeq0_Hwi(void)
         //Log_info0("DMA transfer ping - ADC0");
         // free to process g_g_uint16_adc0_ping
         if(!FisrtTrasnfer)
+        {
             Semaphore_post(s_adc0_ping_ready);
+            copyDMAtoProcess(g_uint16_adc0_ping, ADCchannel[0], DMA_BUFFER_SIZE);
+        }
         else
             FisrtTrasnfer--;
 
@@ -395,7 +407,10 @@ void adcSeq0_Hwi(void)
         //Log_info0("DMA transfer pong - ADC0");
         // free to process g_g_uint16_adc0_pong
         if(!FisrtTrasnfer)
+        {
             Semaphore_post(s_adc0_pong_ready);
+            copyDMAtoProcess(g_uint16_adc0_pong, ADCchannel[0], DMA_BUFFER_SIZE);
+        }
         else
             FisrtTrasnfer--;
     }
@@ -407,7 +422,7 @@ void adcSeq0_Hwi(void)
     }
 
 
-    //GPIO_write(Board_LED0, 0);
+    GPIO_write(Board_LED0, 0);
 }
 
 /**
@@ -444,7 +459,10 @@ void adcSeq1_Hwi(void)
         // Log_info0("DMA transfer ping - ADC1");
         // free to process g_g_uint16_adc1_ping
         if(!FisrtTrasnfer)
+        {
             Semaphore_post(s_adc1_ping_ready);
+            copyDMAtoProcess(g_uint16_adc1_ping, ADCchannel[1], DMA_BUFFER_SIZE);
+        }
         else
             FisrtTrasnfer--;
     }
@@ -459,7 +477,10 @@ void adcSeq1_Hwi(void)
         // Log_info0("DMA transfer pong - ADC1");
         // free to process g_g_uint16_adc1_pong
         if(!FisrtTrasnfer)
+        {
             Semaphore_post(s_adc1_pong_ready);
+            copyDMAtoProcess(g_uint16_adc1_pong, ADCchannel[1], DMA_BUFFER_SIZE);
+        }
         else
             FisrtTrasnfer--;
     }

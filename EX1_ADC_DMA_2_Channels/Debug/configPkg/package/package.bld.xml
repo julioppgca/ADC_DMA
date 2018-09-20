@@ -7,7 +7,7 @@
         <srcFile name="package/cfg/rtos_config_pem4f.c"/>
     </sources>
     <configscripts>
-        <srcFile name="/Users/Julio/ECP108/EX1_ADC_DMA_Project/rtos_config.cfg"/>
+        <srcFile name="/Users/Julio/ECP108/EX1_ADC_DMA_2_Channels/rtos_config.cfg"/>
     </configscripts>
     <makefiles>
         <srcFile name="package.mak" src="package.bld"/>
@@ -44,7 +44,7 @@
         isPartial="false"
         xCfgScript="package/cfg/rtos_config_pem4f.cfg"
         xCfgPrefix="package/cfg/rtos_config_pem4f"
-        cfgScript="/Users/Julio/ECP108/EX1_ADC_DMA_Project/rtos_config.cfg"
+        cfgScript="/Users/Julio/ECP108/EX1_ADC_DMA_2_Channels/rtos_config.cfg"
         cfgArgs="null"
         />
     </configurations>
@@ -56,7 +56,7 @@
         profile="release"
         xCfgScript="package/cfg/rtos_config_pem4f.cfg"
         xCfgPrefix="package/cfg/rtos_config_pem4f"
-        cfgScript="/Users/Julio/ECP108/EX1_ADC_DMA_Project/rtos_config.cfg"
+        cfgScript="/Users/Julio/ECP108/EX1_ADC_DMA_2_Channels/rtos_config.cfg"
         cfgArgs="null"
         />
     </executables>

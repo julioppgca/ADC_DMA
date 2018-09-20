@@ -28,7 +28,7 @@ void heartBeat_TASK(void)
     while (1)
     {
         Task_sleep(HEART_BEAT_TIME);
-        GPIO_toggle(Board_LED2);
+        //GPIO_toggle(Board_LED2);
     }
 }
 

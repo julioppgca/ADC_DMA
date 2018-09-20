@@ -8,7 +8,7 @@ GEN_OPTS__FLAG := --cmd_file="configPkg/compiler.opt"
 GEN_CMDS__FLAG := -l"configPkg/linker.cmd"
 
 ORDERED_OBJS += \
-"./main_adc_dma.obj" \
+"./main_adc_dma_2ch.obj" \
 "./project_includes/EK_TM4C123GXL.obj" \
 "./project_includes/adc_dma_samples.obj" \
 "../EK_TM4C123GXL.cmd" \
@@ -160,8 +160,8 @@ EX1_ADC_DMA_2_Channels.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_CMDS__QUOTED)$(GEN_MISC_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "main_adc_dma.obj" "project_includes/EK_TM4C123GXL.obj" "project_includes/adc_dma_samples.obj" 
-	-$(RM) "main_adc_dma.d" "project_includes/EK_TM4C123GXL.d" "project_includes/adc_dma_samples.d" 
+	-$(RM) "main_adc_dma_2ch.obj" "project_includes/EK_TM4C123GXL.obj" "project_includes/adc_dma_samples.obj" 
+	-$(RM) "main_adc_dma_2ch.d" "project_includes/EK_TM4C123GXL.d" "project_includes/adc_dma_samples.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

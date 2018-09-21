@@ -120,8 +120,8 @@ How to use:
  */
 #define DMA_BUFFER_SIZE                 1024            //!< don't change!
 #define CLK_FREQ                        80000000        //!< TM4C clock frequency
-#define ADC_OVERSAMPLE_VALUE            16               //!< Over sample value 2..64 (power of 2 steps)
-#define SAMPLE_FRAME                    1024             //!< 256 points in 60Hz
+#define ADC_OVERSAMPLE_VALUE            32               //!< Over sample value 2..64 (power of 2 steps)
+#define SAMPLE_FRAME                    512             //!< 256 points in 60Hz
 #define SAMPLE_FREQUENCY                60*SAMPLE_FRAME //!< Sample Frequency: 15360Hz -> 15,36kHz
 #define ADC_OFFSET                      2048.0          //!< Not used, just in case
 #define ADC_SCALE                       3.3/4095        //!< Vmax/ADC_res

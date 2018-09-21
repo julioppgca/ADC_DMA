@@ -217,9 +217,9 @@ static void adcInit(void)
     SysCtlPeripheralReset(SYSCTL_PERIPH_ADC1);
     while (!SysCtlPeripheralReady(SYSCTL_PERIPH_ADC1));
 
-    // Configure the ADC to use PLL at 480 MHz divided by 15 to get an ADC
-    // clock of 32 MHz, 2MSPS.
-    ADCClockConfigSet(ADC1_BASE, ADC_CLOCK_SRC_PLL | ADC_CLOCK_RATE_FULL, 15);
+    // Configure the ADC to use PLL at 400 MHz divided by 25 to get an ADC
+    // clock of 16 MHz, 1MSPS.
+    ADCClockConfigSet(ADC1_BASE, ADC_CLOCK_SRC_PLL | ADC_CLOCK_RATE_FULL, 25);
 
     // Use Hardware Oversample, be aware of the throughput from ADC speed!
     ADCHardwareOversampleConfigure(ADC1_BASE, ADC_OVERSAMPLE_VALUE);
@@ -434,7 +434,7 @@ void adcSeq0_Hwi(void)
  */
 void adcSeq1_Hwi(void)
 {
-    //GPIO_write(Board_LED1,1);
+    GPIO_write(Board_LED1,1);
     static uint8_t FisrtTrasnfer = 2*INITIAL_TRANSFER_SKIP_NUMBER;
     uint32_t modePrimary;
     uint32_t modeAlternate;
@@ -490,6 +490,6 @@ void adcSeq1_Hwi(void)
         dmaInit();
         Log_info0("DMA transfer set restarted due an error - ADC1");
     }
-    //GPIO_write(Board_LED1, 0);
+    GPIO_write(Board_LED1, 0);
 }
 

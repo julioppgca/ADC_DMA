@@ -44,7 +44,7 @@ int main(void)
     /* Turn on user LED */
     GPIO_write(Board_LED1, Board_LED_ON);
 
-    System_printf("\nAlmost blank example, only a heart beat from the board...\n");
+    System_printf("\n2 Analog channels sampling with dma...\n");
     System_flush();
 
     /* Start BIOS */
